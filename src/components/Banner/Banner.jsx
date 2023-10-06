@@ -4,14 +4,14 @@ import Navbar from '../Navbar/Navbar';
 const Banner = () => {
     return (
         <div>
-           <div className="hero h-screen " style={{backgroundImage: 'url(https://i.postimg.cc/QC03mDjN/banner.jpg)', backgroundSize: '95% 100%', backgroundRepeat: 'no-repeat',backgroundPosition: 'center'}}>
+           <div className="hero h-screen  relative" style={{backgroundImage: 'url(https://i.postimg.cc/QC03mDjN/banner.jpg)', backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat',backgroundPosition: 'center'}}>
            <div className="hero-overlay bg-opacity-40"></div>
             <Navbar></Navbar>
   <div className="hero-content text-center text-neutral-content">
-    <div className="max-w-md">
+    <div className="">
       <h1 className="mb-5 text-5xl font-bold"> Largest Wedding Planning Platform</h1>
-      <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <button className="btn btn-primary">Get Started</button>
+      <p className="mb-5">Save time and money in planning your wedding</p>
+      
     </div>
   </div>
 </div>
