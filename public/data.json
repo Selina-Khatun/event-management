@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "title": "Bridal Makeup Artists ",
+        "about":"For Bridal Makeup",
+        "reviews": 35,
+        "price": 10000,
+        "name": "Nirmala Johnson",
+        "image": "https://example.com/widget-x1.jpg",
+        "short_description": "I am Nirmala Johnson, the owner of Nimmy Makeover Artist, based in Jamalpur. I have been working since 2013 and have dolled up around 250 brides. A wedding is a lifetime occasion and it is essential for a bride to look her best for all the pre-wedding, wedding and post-wedding ceremonies. Every bride wants to look beautiful for all her wedding functions. All eyes are on her and therefore she has to look flawless all the time. I am here to fulfill all your dreams that you've ever had for your wedding day."
+        
+    },
+    {
+        "id": 2,
+        "title": "Wedding Photographers",
+        "about":"For 1 Day of Photo + Video",
+        "reviews": 62,
+        "price": 20000,
+        "name": "Tushar Smith",
+        "image": "https://example.com/gizmo-y2.jpg",
+        "short_description": "I am Tushar Smith, the owner of Tushar Photography, based in Jamalpur. My team and I have been working since 2018 and have covered almost 150 weddings. We love to capture the moments of your big day in the best manner possible. We try to bring life and thought to your pictures. Capturing, collecting and remembering sweet memories is everyone's dream. So friends, we are here to make your wonderful memories more memorable."
+    },
+    {
+        "id": 3,
+        "title": "Wedding Planners",
+        "about":" Starting Package",
+        "reviews": 28,
+        "price": 59.99,
+        "name": "Fardeen Davis",
+        "image": "https://example.com/gadget-z3.jpg",
+        "short_description": "I am Fardeen Davis, the owner of Fardeen Decors, based in Jamalpur. I have been working since 1998 and have covered around 1000 weddings till now. We bring a fresh, unique approach to the event management industry. Our team understands that a properly executed event can be leveraged to support an organization’s strategic vision, incorporated into a company’s marketing plan, or used to build networks and client loyalty. As we have seen your work, we would like to request you to please share your contact details to take this ahead."
+    },
+    {
+        "id": 4,
+        "title": "Wedding Decorators ",
+        "about":"For Standard Indoor Decor",
+        "reviews": 49,
+        "price": 100000,
+        "name": "Vikram Wilson",
+        "image": "https://example.com/gizmo-pro.jpg",
+        "short_description": "I am Vikram, the owner of Nidhi Events , based in Jamalpur. I have been working since 2018 and have covered around 50 weddings till now. We have a dedicated team of professionals who can design your wedding as exactly as you want. we are here to make your places look beautiful. We follow your vision and innovation. We help in making your wedding dream a beautiful reality by customizing the décor according to your wishes. We aim to enhance customer satisfaction with the quality of the décor we provide for your big day.."
+    },
+    {
+        "id": 5,
+        "title": "Wedding Venues",
+        "about":"Min. Charges per Day",
+        "reviews": 73,
+        "price": 120000,
+        "name": "Eve Adams",
+        "image": "https://example.com/mega-widget-2000.jpg",
+        "short_description": "Calista Châteaux is a full service villa rental company dedicated to creating authentic travel experiences. Our complimentary guest support includes a team of villa specialists dedicated to finding our guests the perfect home to stay in, and a 24/7 personal concierge service to assist with details big and small."
+    },
+    {
+        "id": 6,
+        "title": "Best Wedding Caterers",
+        "about":"Per Plate starting price",
+        "reviews": 43,
+        "price": 500,
+        "name": "Frank Brown",
+        "image": "https://example.com/super-gadget-xl.jpg",
+        "short_description": "I am Frank Brown , the owner of Brown restaurant  based in Jamalpur. I have been working since 2003 and covered more than 1000 weddings till now. The wide variety of culinary tastes and gourmet food-course palettes is one of the strengths of our marketing strategy and distinguishes our business model, which allows us to meet the ever-changing needs of consumers and landlords. Our company's success is strongly linked to our people, and we have had the opportunity to do business with many people in and around, and we pride ourselves in being known for hiring and retaining the most qualified people, who work for themselves and keep the customer first. Our advantages are our wide range of catering services; top-notch company spirit; flexible pricing; strong working relationship with the clients; a skilled team of catering staff; state-of-the-art kitchen; and commitment to our community. So, why wait anymore. Book us via Wedding Bazaar for the best catering services in town."
+    }
+]
