@@ -1,15 +1,14 @@
 import React from 'react';
 import Banner from '../../components/Banner/Banner';
+import { NavLink } from 'react-router-dom';
 
 const Register = () => {
     return (
         <div className=''>
             <Banner></Banner>
             <div className="relative flex -mt-[33%] lg:w-[40%] md:w-[60%] mx-auto flex-col items-center rounded-xl bg-gray-100 text-gray-700 shadow-none">
-  <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
-    Sign Up
-  </h4>
-  <p className="mt-1 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
+  
+  <p className="mt-3 block font-sans text-2xl font-semibold leading-relaxed text-gray-700 antialiased">
     Enter your details to register.
   </p>
   <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
@@ -95,12 +94,9 @@ const Register = () => {
     </button>
     <p className="mt-4 block text-center font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
       Already have an account?
-      <a
-        className="font-medium text-pink-500 transition-colors hover:text-blue-700"
-        href="#"
-      >
-        Sign In
-      </a>
+
+        <NavLink  className="font-medium text-pink-500 transition-colors hover:text-blue-700" to={'/login'}>Login</NavLink>
+    
     </p>
   </form>
 </div>

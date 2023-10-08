@@ -43,15 +43,24 @@ const Categories = () => {
             <div className="hero lg:h-screen h-fit  relative" style={backgroundImageStyle}>
                 <div className="hero-overlay bg-opacity-40"></div>
                 <Navbar></Navbar>
-                <div className="hero-content  mt-10 p-8 text-center text-neutral-content">
+                <div className="hero-content  lg:mt-10 mt-20 p-8 text-center text-neutral-content">
                     <div className=" text-white lg:mt-5 ">
                         <h1 className="mb-2 md:text-5xl text-white font-bold"> {title}</h1>
+                        <h2 className="mb-2 md:text-4xl p-2 text-white font-bold">You can get 20% discount  </h2>
                         <p className="mb-2">Save time and money in planning your wedding</p>
-                        <div className='flex justify-center lg:p-2 gap-10 lg:text-3xl font-bold'>
+                       
+                    </div>
+                </div>
+            </div>
+            <div className="hero-content  mt-10 p-8 text-center text-neutral-content">
+                    <div className=" text-black lg:mt-5 ">
+                        <h1 className="mb-2 md:text-5xl text-black font-bold"> {title}</h1>
+                    
+                        <div className='flex justify-center py-4 lg:p-2 gap-10 lg:text-3xl font-bold'>
                             <p>Price: {price} $</p>
                             <p>{about}</p>
                         </div>
-                      <div className='flex justify-center text-xl text-white gap-9'> 
+                      <div className='flex justify-center text-xl text-black gap-9'> 
 
 
                       <p>  Name : {name}</p>
@@ -65,11 +74,9 @@ const Categories = () => {
                                 <img src={author_img} />
                             </div>
                         </div>
-                        <p className=' text-white md:text-base text-xs'>{short_description}</p>
+                        <p className=' text-black md:text-base text-xs'>{short_description}</p>
                     </div>
                 </div>
-            </div>
-
         </div>
     );
 };

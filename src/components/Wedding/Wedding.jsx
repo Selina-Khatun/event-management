@@ -7,13 +7,13 @@ const Wedding = () => {
         <div className=' shadow-2xl rounded-2xl py-5 my-20 mx-10 px-4'>
             <h1 className=' text-5xl font-sans p-5 font-bold'>Why Wedding House?</h1>
             <h3 className=' flex flex-wrap lg:text-3xl  font-sans px-5 font-bold'><span className=' text-rose-500 font-DancingScript  text-xl md:text-6xl'>WeddingHouse</span> is Bangladesh’s largest wedding planning platform by WeddingHouse.com</h3>
-            <div className='flex gap-5 flex-wrap justify-around py-10  font-bold  font-sans'>
+            <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-2  justify-around py-10  font-bold  font-sans'>
                 <div className='flex flex-grow justify-center items-center gap-5 '>
                 <BsShieldFillCheck className=' text-3xl'></BsShieldFillCheck>
                     
                     <p className='text-gray-500'>2 Lakh+ trusted vendors in 40+ cities</p>
                 </div>
-                <div className='flex  flex-grow justify-center items-center gap-5 '>
+                <div className='flex ml-0 flex-grow justify-center items-center gap-5 '>
                     <AiFillLike className=' text-4xl'></AiFillLike>
                     <p className='text-gray-500'>3 Lakh+ happy customers</p>
                 </div>

@@ -1,5 +1,7 @@
 import React from 'react';
 import Banner from '../../components/Banner/Banner';
+import { NavLink } from 'react-router-dom';
+import Google from '../../provider/Google/Google';
 
 
 const Login = () => {
@@ -12,7 +14,7 @@ const Login = () => {
       <div className="relative lg:w-[40%] md:w-[60%]  -mt-[33%] mx-auto flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
         <div className="relative mx-4 -mt-6 mb-4 grid h-28 place-items-center overflow-hidden rounded-xl bg-gradient-to-tr from-pink-600 to-pink-400 bg-clip-border text-white shadow-lg shadow-pink-500/40">
           <h3 className="block font-sans text-3xl font-semibold leading-snug tracking-normal text-white antialiased">
-            Sign In
+          Log In
           </h3>
         </div>
         <div className="flex flex-col gap-4 p-6">
@@ -78,16 +80,17 @@ const Login = () => {
             type="button"
             data-ripple-light="true"
           >
-            Sign In
+            Log In
           </button>
+
+          <p className=' text-center py-2 '>------------or------------</p>
+          <Google></Google>
           <p className="mt-6 flex justify-center font-sans text-sm font-light leading-normal text-inherit antialiased">
             Don't have an account?
-            <a
-              href="#signup"
-              className="ml-1 block font-sans text-sm font-bold leading-normal text-pink-500 antialiased"
-            >
-              Sign up
-            </a>
+         
+            
+            <NavLink  className="font-medium text-pink-500 transition-colors hover:text-pink-700" to={'/register'}>Register</NavLink>
+          
           </p>
         </div>
       </div>

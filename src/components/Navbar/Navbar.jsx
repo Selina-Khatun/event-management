@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const navLinks = <>
@@ -14,7 +14,7 @@ const Navbar = () => {
     return (
         <div className=' bg-transparent bg-clip-border'>
             <div className="navbar z-50 absolute top-0 items-center flex justify-around left-0 right-0 w-[100%] mx-auto ">
-                <div className="flex  relative gap-[47%] items-baseline ">
+                <div className="flex  relative gap-[47%]  items-baseline ">
                     <div className="dropdown relative flex-1">
 
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-14 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-black">
@@ -30,11 +30,11 @@ const Navbar = () => {
 
             
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                            <div className="w-10 rounded-full">
+                            <div className="w-14 relative -mb-14 rounded-full">
                                 <img src="https://i.postimg.cc/Dywnxxmj/1000-F-282670461-Um2cw-G6-K1-HH9-Rx-Ioli3e-S1-Ihgr5-V8ff-T.jpg" />
                             </div>
                         </label>
-                        <h3 className=' relative bottom-10 lg:-left-10 font-DancingScript lg:text-3xl text-white'>WeddingHouse</h3>
+                        <h3 className=' relative bottom-12 lg:-left-10 font-DancingScript lg:text-3xl text-white'>WeddingHouse</h3>
                     </div>
 
                 </div>
