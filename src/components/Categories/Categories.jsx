@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import { useLoaderData, useParams } from 'react-router-dom';
+import TeamMembers from '../TeamMembers/TeamMembers';
+import Footer from '../Footer/Footer';
 
 const Categories = () => {
     const [selectedItem, setSelectedItem] = useState({});
@@ -77,6 +79,8 @@ const Categories = () => {
                         <p className=' text-black md:text-base text-xs'>{short_description}</p>
                     </div>
                 </div>
+                <TeamMembers></TeamMembers>
+                <Footer></Footer>
         </div>
     );
 };

@@ -1,14 +1,16 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
     return (
         <div>
             <footer className="footer footer-center p-10 mt-16 bg-base-200 text-base-content rounded">
                 <nav className="grid grid-flow-col gap-4">
-                    <a className="link link-hover">About us</a>
-                    <a className="link link-hover">Contact</a>
-                    <a className="link link-hover">Jobs</a>
-                    <a className="link link-hover">Press kit</a>
+                    <NavLink className='mr-10 hover:text-red-600' to={'/'}>Home</NavLink>
+
+                    <NavLink className='mr-10 hover:text-red-600' to={'/services'}>Services</NavLink>
+                    <NavLink className='mr-10 hover:text-red-600' to={'/about'}>About</NavLink>
+
                 </nav>
                 <nav>
                     <div className="grid grid-flow-col gap-4">

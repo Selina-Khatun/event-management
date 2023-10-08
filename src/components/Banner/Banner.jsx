@@ -10,7 +10,7 @@ const Banner = () => {
         <div className="hero-content p-9 mt-9 text-center text-neutral-content">
           <div className="">
             <h1 className="mb-5 lg:text-5xl text-white font-bold"> Largest Wedding Planning Platform</h1>
-            <p className="mb-5">Save time and money in planning your wedding</p>
+            <p className="mb-5">Save time and money in planning your wedding & select your preferred style</p>
 
           </div>
         </div>

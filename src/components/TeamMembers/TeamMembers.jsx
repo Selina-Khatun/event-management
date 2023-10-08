@@ -48,7 +48,7 @@ const TeamMembers = () => {
                     </div>
                 </div>
                 <h2 className=' text-lg font-bold'>Eve Adams</h2>
-                <h2>CEO </h2>
+                <h2>Co-founder, Chef</h2>
             </div>
             <div className='py-3'>
                 <div className="avatar">
