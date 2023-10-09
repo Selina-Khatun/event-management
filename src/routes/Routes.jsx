@@ -7,12 +7,14 @@ import Categories from '../components/Categories/Categories';
 import Register from '../pages/Register/Register';
 import Services from '../pages/Services/Services';
 import About from '../pages/About/About';
+import ErrorPage from '../pages/ErrorPage/ErrorPage';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
 
       {

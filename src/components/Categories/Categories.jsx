@@ -8,20 +8,20 @@ const Categories = () => {
     const [selectedItem, setSelectedItem] = useState({});
 
     const { id } = useParams();
-    console.log('ID:', id);
+    // console.log('ID:', id);
 
     const data = useLoaderData();
-    console.log('Data:', data);
+    // console.log('Data:', data);
 
     useEffect(() => {
         if (data && id) {
             const foundItem = data?.find(item => {
-                console.log('Item ID:', item.id);
-                console.log('Expected ID:', id);
+                // console.log('Item ID:', item.id);
+                // console.log('Expected ID:', id);
                 return item.id === parseInt(id);
             });
 
-            console.log(foundItem);
+            // console.log(foundItem);
             setSelectedItem(foundItem);
 
         }

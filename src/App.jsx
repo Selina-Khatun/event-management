@@ -6,9 +6,9 @@
 
 //   return (
 //     <>
-      
+
 //       <h1>Vite + React</h1>
-     
+
 //     </>
 //   )
 // }
@@ -16,9 +16,8 @@
 // export default App
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Google from './Google';
 import Navbar from '../../components/Navbar/Navbar';
-import Login from './Login'; // Assuming you have a Login component
+import Login from './Login';
 
 const App = () => {
   return (
@@ -32,7 +31,7 @@ const App = () => {
             <Route path="/services" component={Services} />
             <Route path="/about" component={About} />
             <Route path="/register" component={Register} />
-            {/* Add more routes as needed */}
+
           </Switch>
         </Route>
       </Switch>

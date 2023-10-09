@@ -2,42 +2,35 @@ import React, { useContext, useState } from 'react';
 import Banner from '../../components/Banner/Banner';
 import { NavLink } from 'react-router-dom';
 import { AuthContext } from '../../firebase/AuthProvider';
-
+import swal from 'sweetalert';
 const Register = () => {
-  // const handleRegister=e=>{
-  //   e.preventDefault();
-  //   console.log('form submitted')
-  // }
-  const{register}=useContext(AuthContext);
-const [name,setName]=useState("");
-const [email,setEmail]=useState("");
-const [password,setPassword]=useState("");
-const [error,setError]=useState("");
-// console.log(name);
-// console.log(email);
-// console.log(password);
-// console.log(error);
-// setRegistered(" ")
-const handleRegister=()=>{
-  if(!/^(?=.*?[A-Z])(?=.*?[#?!@$%^&*-]).{6,}$/.test(password)){
-    // setError("The password is less than 6 characters ,don't have a capital letter ,don't have a special character")
-    alert("The password is less than 6 characters ,a capital letter , a special character");
 
-  }else{
-    if(email){
-      register(email,password).then((result)=>
-      console.log(result.user)
-      
-    )};
-    alert("successfully");
-  }
-  
-}; 
+  const { register } = useContext(AuthContext);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+
+  const handleRegister = () => {
+    if (!/^(?=.*?[A-Z])(?=.*?[#?!@$%^&*-]).{6,}$/.test(password)) {
+      swal("The password is less than 6 characters ,a capital letter , a special character");
+    } else {
+      if (email) {
+        register(email, password).then((result) =>
+          console.log(result.user)
+        )
+      };
+
+      swal("Successfully Registered");
+    }
+
+  };
 
   return (
     <div className=''>
       <Banner></Banner>
-      <p>{ email}</p>
+      <p>{email}</p>
       <div className="relative flex -mt-[33%] lg:w-[40%] md:w-[60%] mx-auto flex-col items-center rounded-xl bg-gray-100 text-gray-700 shadow-none">
 
         <p className="mt-3 block font-sans text-2xl font-semibold leading-relaxed text-gray-700 antialiased">
@@ -46,7 +39,7 @@ const handleRegister=()=>{
         <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
           <div className="mb-4 flex flex-col gap-6">
             <div className="relative h-11 w-full min-w-[200px]">
-              <input onChange={(e)=>setName(e.target.value)} type='text'
+              <input onChange={(e) => setName(e.target.value)} type='text'
                 className="peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                 placeholder=" "
               />
@@ -55,7 +48,7 @@ const handleRegister=()=>{
               </label>
             </div>
             <div className="relative h-11 w-full min-w-[200px]">
-              <input onChange={(e)=>setEmail(e.target.value)}
+              <input onChange={(e) => setEmail(e.target.value)}
                 className="peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                 placeholder="email " type='email'
               />
@@ -64,7 +57,7 @@ const handleRegister=()=>{
               </label>
             </div>
             <div className="relative h-11 w-full min-w-[200px]">
-              <input onChange={(e)=>setPassword(e.target.value)}
+              <input onChange={(e) => setPassword(e.target.value)}
                 type="password"
                 className="peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                 placeholder=" "
@@ -117,13 +110,15 @@ const handleRegister=()=>{
               </p>
             </label>
           </div>
-          <button onClick={handleRegister}
+
+
+          <NavLink to={'/'}>  <button onClick={handleRegister}
             className="mt-6 block w-full select-none rounded-lg bg-pink-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
             type="button"
             data-ripple-light="true"
           >
             Register
-          </button>
+          </button> </NavLink>
           <p className="mt-4 block text-center font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
             Already have an account?
 
