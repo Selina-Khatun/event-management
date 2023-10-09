@@ -11,7 +11,7 @@ const Home = () => {
     const data = useLoaderData();
     // console.log(data);
     return (
-        <div>
+        <div className=' max-w-7xl mx-auto'>
 
             <Banner></Banner>
             <h1 className=' text-4xl font-bold text-center font-sans mt-10'>Trusted Vendors Services</h1>

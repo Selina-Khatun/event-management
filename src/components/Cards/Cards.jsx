@@ -11,7 +11,7 @@ const Cards = ({ data }) => {
           <h2 className="card-title font-bold">{name}</h2>
           <div className=' flex text-lg font-bold text-black gap-9'>
 
-            <p className=' border border-rose-200 hover:bg-rose-100 rounded'>Price: {price} $</p>
+            <p className=' border border-rose-200 hover:bg-rose-100 rounded'>Price: {price}$</p>
             <p>{title}</p>
 
           </div>

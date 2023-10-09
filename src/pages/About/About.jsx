@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../../components/Footer/Footer';
 import Navbar from '../../components/Navbar/Navbar';
+import TeamMembers from '../../components/TeamMembers/TeamMembers';
 
 const About = () => {
     return (
@@ -38,6 +39,7 @@ const About = () => {
                     <img className=' h-screen w-full' src="https://i.postimg.cc/25xRqchd/team2.jpg" alt="" />
                 </div>
             </div>
+            <TeamMembers></TeamMembers>
 
             <Footer></Footer>
         </div>
