@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Banner from '../../components/Banner/Banner';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 import { AuthContext } from '../../firebase/AuthProvider';
 import swal from 'sweetalert';
@@ -8,6 +8,8 @@ import swal from 'sweetalert';
 const Login = () => {
 
   const { googleSignIn, signIn, register } = useContext(AuthContext);
+  const location=useLocation();
+  const navigate=useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -22,6 +24,7 @@ const Login = () => {
       signIn(email, password)
         .then((result) => {
           console.log(result.user);
+          navigate(location?.state? location.state:'/');
           swal("Successfully logged in.");
         })
         .catch((error) => {
@@ -35,18 +38,11 @@ const Login = () => {
 
 
   const handleLogOut = () => {
-    // Implement your sign-out logic here
-    // For example, you can call a sign-out function from your authentication provider
-    // and then set setIsLoggedIn(false) when the user is successfully logged out.
     setIsLoggedIn(false);
   };
 
-  // Use useEffect to update the button text based on the isLoggedIn state
-  useEffect(() => {
-    // If the user is logged in, change the button text to "Log out"
+  useEffect(() => {  
     if (isLoggedIn) {
-      // Implement your "Log out" logic here
-      // For example, you can render a "Log out" button
     }
   }, [isLoggedIn]);
 
@@ -147,6 +143,7 @@ const Login = () => {
             <NavLink to={'/'}> <button onClick={handleGoogle} className='font-semibold btn btn-wide btn-outline rounded-3xl normal-case'>
               <FcGoogle /> Log in with Google
             </button></NavLink>
+
 
           </div>
 

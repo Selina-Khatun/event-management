@@ -8,16 +8,20 @@ const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState();
+    const [loading,setLoading]=useState(true);
+
     const googleSignIn = (value) => {
-        // console.log('hello',value);
+        setLoading(true);
         return signInWithPopup(auth, googleProvider);
     }
 
     const signIn = (email, password) => {
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password)
     }
 
     const register = (email, password) => {
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password)
     }
     useEffect(() => {
@@ -25,6 +29,7 @@ const AuthProvider = ({ children }) => {
 
             console.log("state changed");
             setUser(currentUser);
+            setLoading(false);
         });
 
      return()=>{
@@ -34,6 +39,7 @@ const AuthProvider = ({ children }) => {
     }, []);
 
     const logOut=()=>{
+        setLoading(true);
         return signOut(auth);
     }
 
@@ -44,6 +50,7 @@ const AuthProvider = ({ children }) => {
         register,
         user,
         logOut,
+        loading,
     };
 
 

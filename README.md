@@ -1,8 +1,10 @@
-# React + Vite
+# Add 5 Project features
+### 1. Our website name is Wedding House. Our website has a navigation bar at the top.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 2.There are 5 menu items in the navigation bar. Home, Service, About, Register, Login, Log Out. If there is a user then the logout button is shown and if there is no user then the login button is shown.
+ 
+### 3.If anyone wants to see our services. Then you have to login first. You are not allowed to enter our service page without login.
 
-Currently, two official plugins are available:
+### 4. You can login to our website directly from Google and you can also login with Gmail.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 5. Our website  are accessible and fully functional on mobile devices.

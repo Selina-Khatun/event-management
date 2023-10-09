@@ -8,6 +8,7 @@ import Register from '../pages/Register/Register';
 import Services from '../pages/Services/Services';
 import About from '../pages/About/About';
 import ErrorPage from '../pages/ErrorPage/ErrorPage';
+import PrivateRoute from './PrivateRoute';
 
 
 const router = createBrowserRouter([
@@ -26,19 +27,19 @@ const router = createBrowserRouter([
      
       {
         path: '/categories/:id',
-        element: <Categories />,
+        element: <PrivateRoute><Categories /></PrivateRoute>,
         loader: () => fetch('/data.json').then((response) => response.json())
       },
 
       {
         path: '/services',
-        element: <Services></Services>,
+        element: <PrivateRoute><Services></Services></PrivateRoute>,
         loader: () => fetch('/data.json')
       },
 
       {
         path: '/about',
-        element: <About></About>
+        element:<PrivateRoute><About></About></PrivateRoute>
       },
 
       {
