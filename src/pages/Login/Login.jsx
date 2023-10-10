@@ -5,8 +5,8 @@ import { FcGoogle } from 'react-icons/fc';
 import { AuthContext } from '../../firebase/AuthProvider';
 import swal from 'sweetalert';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; 
-AOS.init({duration:1000});
+import 'aos/dist/aos.css';
+AOS.init({ duration: 1000 });
 const Login = () => {
 
   const { googleSignIn, signIn, register } = useContext(AuthContext);
@@ -18,24 +18,24 @@ const Login = () => {
   const [error, setError] = useState("");
 
   const handleLogIn = () => {
-    if (!register) {
-
-      swal("please Register ");
-    } else if (email && password) {
-
+    console.log(email, password)
+     
       signIn(email, password)
         .then((result) => {
           console.log(result.user);
-          navigate(location?.state ? location.state : '/');
-          e.target.reset();
+         if (result.user)
+         {
           swal("Successfully logged in.");
+          navigate(location?.state ? location.state : '/');
+         }
+        
         })
         .catch((error) => {
           console.error("Error signing in:", error);
           swal("Email and password didn't match");
         });
 
-    }
+  
 
   };
 
