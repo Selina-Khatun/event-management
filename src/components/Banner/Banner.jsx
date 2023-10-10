@@ -17,8 +17,8 @@ const Banner = () => {
         <Navbar></Navbar>
         <div className="hero-content p-9 mt-9 text-center text-neutral-content">
           <div className="">
-            <h1 data-aos="slide-down" className="mb-5 lg:text-5xl text-white font-bold"> Largest Wedding Planning Platform</h1>
-            <p data-aos="slide-down" className="mb-5">Save time and money in planning your wedding & select your preferred style</p>
+            <h1 data-aos="slide-down" className="md:mb-5 mb-10 lg:mb-5 lg:text-5xl md:text-3xl text-white font-bold"> Largest Wedding Planning Platform</h1>
+            <p data-aos="slide-down" className="lg:mt-10 mt-6 lg:text-base text-xs">Save time and money in planning your wedding & select your preferred style</p>
 
           </div>
         </div>

@@ -68,7 +68,7 @@ const Login = () => {
         <form>
           <div className="flex flex-col gap-4 p-6">
             <div className="relative h-11 w-full min-w-[200px]">
-              <input type='email' onChange={(e) => setEmail(e.target.value)}
+              <input type='email' onChange={(e) => setEmail(e.target.value)} required name='email'
                 className="peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
 
               />
@@ -77,7 +77,7 @@ const Login = () => {
               </label>
             </div>
             <div className="relative h-11 w-full min-w-[200px]">
-              <input type='password' onChange={(e) => setPassword(e.target.value)}
+              <input type='password' onChange={(e) => setPassword(e.target.value)} required name='password'
                 className="peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
 
               />

@@ -15,7 +15,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    errorElement:<ErrorPage></ErrorPage>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
 
       {
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
         loader: () => fetch('/data.json')
 
       },
-     
+
       {
         path: '/categories/:id',
         element: <PrivateRoute><Categories /></PrivateRoute>,
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
 
       {
         path: '/about',
-        element:<PrivateRoute><About></About></PrivateRoute>
+        element: <PrivateRoute><About></About></PrivateRoute>
       },
 
       {

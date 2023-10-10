@@ -1,4 +1,4 @@
-// ParentComponent.js
+
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { getAuth, onAuthStateChanged,signOut } from 'firebase/auth';
@@ -34,14 +34,14 @@ const ParentComponent = () => {
                 <Route path="/login" component={Login} />
                 <Route>
                     {loggedUser && <Navbar loggedUser={loggedUser} handleLogout={handleLogout} /> } {/* Pass loggedUser as a prop */}
-                    {/* <Google handleLogout={handleLogout} /> */}
+        
                     <Google handleLogout={handleLogout}></Google>
                     <Switch>
                         <Route exact path="/" component={Home} />
                         <Route path="/services" component={Services} />
                         <Route path="/about" component={About} />
                         <Route path="/register" component={Register} />
-                        {/* Add more routes as needed */}
+                       
                     </Switch>
                 </Route>
             </Switch>
