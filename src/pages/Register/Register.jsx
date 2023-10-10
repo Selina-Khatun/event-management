@@ -35,7 +35,6 @@ const Register = () => {
 
   };
   
-
   return (
     <div className=' mb-10'>
       <Banner></Banner>
