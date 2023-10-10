@@ -1,37 +1,46 @@
 import React, { useContext, useState } from 'react';
 import Banner from '../../components/Banner/Banner';
-import { NavLink } from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
 import { AuthContext } from '../../firebase/AuthProvider';
 import swal from 'sweetalert';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init({duration:1000});
 const Register = () => {
-
+  
   const { register } = useContext(AuthContext);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-
-
+  
   const handleRegister = () => {
     if (!/^(?=.*?[A-Z])(?=.*?[#?!@$%^&*-]).{6,}$/.test(password)) {
       swal("The password is less than 6 characters ,a capital letter , a special character");
     } else {
       if (email) {
-        register(email, password).then((result) =>
-          console.log(result.user)
-        )
-      };
+        register(email, password)
+          .then((result) => {
+            console.log(result.user);
+            e.target.reset();
+          
+          })
+          .catch((error) => {
+            setError(error.message);
+          });
+      }
 
       swal("Successfully Registered");
     }
 
   };
+  
 
   return (
-    <div className=''>
+    <div className=' mb-10'>
       <Banner></Banner>
       <p>{email}</p>
-      <div className="relative flex -mt-[33%] lg:w-[40%] md:w-[60%] mx-auto flex-col items-center rounded-xl bg-gray-100 text-gray-700 shadow-none">
+      <div data-aos="fade-up" className="relative flex -mt-[33%] lg:w-[40%] md:w-[60%] mx-auto flex-col items-center rounded-xl bg-gray-100 text-gray-700 shadow-none">
 
         <p className="mt-3 block font-sans text-2xl font-semibold leading-relaxed text-gray-700 antialiased">
           Enter your details to register.
@@ -111,15 +120,16 @@ const Register = () => {
             </label>
           </div>
 
-
-          <NavLink to={'/'}>  <button onClick={handleRegister}
+          <button onClick={handleRegister}
             className="mt-6 block w-full select-none rounded-lg bg-pink-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
             type="button"
             data-ripple-light="true"
           >
             Register
-          </button> </NavLink>
-          <p className="mt-4 block text-center font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
+          </button>
+
+
+          <p className="my-4 block text-center font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
             Already have an account?
 
             <NavLink className="font-medium text-pink-500 transition-colors hover:text-blue-700" to={'/login'}>Login</NavLink>

@@ -3,6 +3,9 @@ import Footer from '../../components/Footer/Footer';
 import Navbar from '../../components/Navbar/Navbar';
 import { useLoaderData } from 'react-router-dom';
 import Cards from '../../components/Cards/Cards';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init({duration:1000});
 const Services = () => {
     const data = useLoaderData();
 
@@ -13,8 +16,8 @@ const Services = () => {
                 <Navbar></Navbar>
                 <div className="hero-content p-9 mt-9 text-ellipsis text-neutral-content">
                     <div className="">
-                        <h1 className="mb-5 lg:text-6xl font-bold">Our Services</h1>
-                        <h1 className="mb-5 lg:text-5xl text-white font-bold"> Planning a Fabulous
+                        <h1 data-aos="flip-down" className="mb-5 lg:text-6xl font-bold">Our Services</h1>
+                        <h1 data-aos="fade-up" className="mb-5 lg:text-5xl text-white font-bold"> Planning a Fabulous
                             Event?</h1>
                         <p className="mb-5">Save time and money in planning your wedding & select your preferred style</p>
 

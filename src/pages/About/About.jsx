@@ -2,7 +2,9 @@ import React from 'react';
 import Footer from '../../components/Footer/Footer';
 import Navbar from '../../components/Navbar/Navbar';
 import TeamMembers from '../../components/TeamMembers/TeamMembers';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init({duration:1000});
 const About = () => {
     return (
         <div>
@@ -12,8 +14,8 @@ const About = () => {
                 <Navbar></Navbar>
                 <div className="hero-content p-9 mt-9 text-center text-neutral-content">
                     <div className="">
-                        <h1 className="mb-5 lg:text-4xl text-white font-bold">About Us</h1>
-                        <h1 className="mb-5 lg:text-6xl font-bold"> Our Story of
+                        <h1 data-aos="fade-up" className="mb-5 lg:text-4xl text-white font-bold">About Us</h1>
+                        <h1 data-aos="fade-in" className="mb-5 lg:text-6xl font-bold"> Our Story of
                             Success</h1>
                     </div>
                 </div>

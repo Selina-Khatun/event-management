@@ -1,15 +1,17 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Banner from '../../components/Banner/Banner';
-import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 import { AuthContext } from '../../firebase/AuthProvider';
 import swal from 'sweetalert';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init({duration:1000});
 const Login = () => {
 
   const { googleSignIn, signIn, register } = useContext(AuthContext);
-  const location=useLocation();
-  const navigate=useNavigate();
+  const location = useLocation();
+  const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -24,7 +26,8 @@ const Login = () => {
       signIn(email, password)
         .then((result) => {
           console.log(result.user);
-          navigate(location?.state? location.state:'/');
+          navigate(location?.state ? location.state : '/');
+          e.target.reset();
           swal("Successfully logged in.");
         })
         .catch((error) => {
@@ -37,11 +40,7 @@ const Login = () => {
   };
 
 
-  const handleLogOut = () => {
-    setIsLoggedIn(false);
-  };
-
-  useEffect(() => {  
+  useEffect(() => {
     if (isLoggedIn) {
     }
   }, [isLoggedIn]);
@@ -49,6 +48,7 @@ const Login = () => {
   const handleGoogle = () => {
     googleSignIn().then((result) => {
       console.log(result.user);
+      navigate(location?.state ? location.state : '/');
       swal("Successfully logged in.")
     });
   };
@@ -56,10 +56,10 @@ const Login = () => {
   return (
 
 
-    <div className=' '>
+    <div className='mb-10 '>
 
       <Banner></Banner>
-      <div className="relative lg:w-[40%] md:w-[36%] w-[90%]  -mt-[33%] mx-auto flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+      <div data-aos="zoom-in" className="relative lg:w-[40%] md:w-[36%] w-[90%]  -mt-[33%] mx-auto flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
         <div className="relative mx-4 -mt-6 mb-4 grid  place-items-center overflow-hidden rounded-xl bg-gradient-to-tr from-pink-600 to-pink-400 bg-clip-border text-white shadow-lg shadow-pink-500/40">
           <h3 className="block font-sans text-3xl font-semibold leading-snug tracking-normal text-white antialiased">
             Log In
@@ -122,14 +122,13 @@ const Login = () => {
                 </label>
               </div>
             </div>
-           
-            <NavLink to={'/'}> <button onClick={handleLogIn}
+            <button onClick={handleLogIn}
               className="block w-full select-none rounded-lg bg-gradient-to-tr from-pink-600 to-pink-400 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               type="button"
               data-ripple-light="true"
             >
               Log In
-            </button></NavLink>
+            </button>
 
           </div>
         </form>
@@ -138,16 +137,14 @@ const Login = () => {
 
           <p className=' text-center py-2 '>------------or------------</p>
 
-          <div className=' text-center'>           
+          <div className=' text-center'>
 
-            <NavLink to={'/'}> <button onClick={handleGoogle} className='font-semibold btn btn-wide btn-outline rounded-3xl normal-case'>
+            <button onClick={handleGoogle} className='font-semibold btn btn-wide btn-outline rounded-3xl normal-case'>
               <FcGoogle /> Log in with Google
-            </button></NavLink>
-
-
+            </button>
           </div>
 
-          <p className="mt-6 flex justify-center font-sans text-sm font-light leading-normal text-inherit antialiased">
+          <p className="my-6 flex justify-center font-sans text-sm font-light leading-normal text-inherit antialiased">
             Don't have an account?
 
 
