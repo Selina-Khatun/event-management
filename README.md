@@ -10,8 +10,8 @@
 ### 5. Our website  are accessible and fully functional on mobile devices.
 
 
-  - - - -  # Website name  : event management  
-
+  - - - -  # Website name  : Wedding House  
+## Type: Event Management Application
 
 
    * # live site :
